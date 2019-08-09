@@ -17,7 +17,9 @@ app.use(
   graphqlHttp({
     schema: graphQlSchema,
     rootValue: graphQlResolver,
-    graphiql: true
+    graphiql: true,
+
+    introspection: true
   })
 );
 
