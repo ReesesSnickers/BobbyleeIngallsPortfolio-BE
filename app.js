@@ -30,7 +30,7 @@ mongoose
     }?retryWrites=true&w=majority`
   )
   .then(() => {
-    app.listen(8000);
+    app.listen(process.env.PORT);
   })
   .catch(err => {
     console.log(err);
