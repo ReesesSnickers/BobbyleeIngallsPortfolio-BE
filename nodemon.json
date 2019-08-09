@@ -3,6 +3,6 @@
     "MONGO_USER": "ingallsbobbylee",
     "MONGO_PASSWORD": "XrObdMc6BkUNbIHW",
     "MONGO_DB": "portfolio",
-    "PORT": 3000
+    "PORT": 8000
   }
 }
