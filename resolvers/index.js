@@ -6,6 +6,7 @@ module.exports = {
     return Blog.find()
       .then(blogs => {
         return blogs.map(blog => {
+          console.log(blog.created);
           const convertedDateString = `${blog.created.getMonth() +
             1}/${blog.created.getDay()}/${blog.created.getFullYear()}`;
           return { ...blog._doc, _id: blog.id, created: convertedDateString };
