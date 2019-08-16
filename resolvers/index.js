@@ -7,7 +7,7 @@ module.exports = {
       .then(blogs => {
         return blogs.map(blog => {
           const convertedDateString = `${blog.created.getMonth() +
-            1}/${blog.created.getDate()}/${blog.created.getFullYear()}`;
+            1}/${blog.created.getDate() - 1}/${blog.created.getFullYear()}`;
           return { ...blog._doc, _id: blog.id, created: convertedDateString };
         });
       })
