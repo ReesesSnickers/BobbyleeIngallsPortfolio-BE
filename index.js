@@ -26,12 +26,6 @@ app.use(
 app.get("/", function(req, res) {
   res.redirect("/graphql");
 });
-console.log(
-  "test",
-  process.env.MONGO_USER,
-  process.env.MONGO_PASSWORD,
-  process.env.MONGO_DB
-);
 mongoose
   .connect(
     `mongodb+srv://${process.env.MONGO_USER}:${
