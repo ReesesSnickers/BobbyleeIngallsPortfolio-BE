@@ -6,9 +6,8 @@ module.exports = {
     return Blog.find()
       .then(blogs => {
         return blogs.map(blog => {
-          console.log(blog.created);
           const convertedDateString = `${blog.created.getMonth() +
-            1}/${blog.created.getDay()}/${blog.created.getFullYear()}`;
+            1}/${blog.created.getDate() + 1}/${blog.created.getFullYear()}`;
           return { ...blog._doc, _id: blog.id, created: convertedDateString };
         });
       })
@@ -40,7 +39,8 @@ module.exports = {
       .then(projects => {
         return projects.map(project => {
           const convertedDateString = `${project.created.getMonth() +
-            1}/${project.created.getDay()}/${project.created.getFullYear()}`;
+            1}/${project.created.getDate() +
+            1}/${project.created.getFullYear()}`;
 
           return {
             ...project._doc,
