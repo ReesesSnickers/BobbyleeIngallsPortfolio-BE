@@ -32,7 +32,8 @@ mongoose
       process.env.MONGO_PASSWORD
     }@bobbyleeingallsportfolio-lewo7.azure.mongodb.net/${
       process.env.MONGO_DB
-    }?retryWrites=true&w=majority`
+    }?retryWrites=true&w=majority`,
+    { useNewUrlParser: true }
   )
   .then(() => {
     app.listen(process.env.PORT || 3000, () => {
